@@ -1,0 +1,37 @@
+2025-11-03 22:29:02,031 - __main__ - INFO - Starting server on 0.0.0.0:8888
+INFO:     Started server process [3671396]
+INFO:     Waiting for application startup.
+2025-11-03 22:29:02,042 - api_service - INFO - Starting SciPIP API Service...
+2025-11-03 22:29:02.093 | DEBUG    | utils.paper_retriever:__init__:65 - init co-cite map begin...
+2025-11-03 22:29:05.607 | DEBUG    | utils.paper_retriever:__init__:74 - init co-cite map success
+2025-11-03 22:29:05,613 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/linweiquan/SciPIP/assets/model/jinaai/jina-embeddings-v3
+2025-11-03 22:29:05,620 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 根据 architectures 推断 model_type: xlm-roberta
+2025-11-03 22:29:05,621 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - WARNING - 临时移除了 auto_map 以支持离线加载。这会导致参数不匹配警告（LoRA 权重未使用），但不影响模型功能，因为 SentenceTransformer 使用 custom_st.Transformer 类。
+2025-11-03 22:29:05,624 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 已恢复原始 config.json
+The following layers were not sharded: embeddings.LayerNorm.bias, encoder.layer.*.output.dense.weight, encoder.layer.*.output.dense.bias, pooler.dense.weight, embeddings.LayerNorm.weight, embeddings.token_type_embeddings.weight, embeddings.position_embeddings.weight, encoder.layer.*.attention.self.query.weight, encoder.layer.*.attention.self.query.bias, encoder.layer.*.attention.output.LayerNorm.bias, encoder.layer.*.output.LayerNorm.weight, embeddings.word_embeddings.weight, encoder.layer.*.intermediate.dense.bias, encoder.layer.*.attention.output.dense.bias, encoder.layer.*.attention.self.key.weight, encoder.layer.*.intermediate.dense.weight, pooler.dense.bias, encoder.layer.*.output.LayerNorm.bias, encoder.layer.*.attention.self.value.bias, encoder.layer.*.attention.output.dense.weight, encoder.layer.*.attention.self.key.bias, encoder.layer.*.attention.self.value.weight, encoder.layer.*.attention.output.LayerNorm.weight
+2025-11-03 22:29:09,809 - sentence_transformers.SentenceTransformer - INFO - 2 prompts are loaded, with the keys: ['retrieval.query', 'retrieval.passage']
+2025-11-03 22:29:09,810 - api_service - INFO - ✅ Backend initialized successfully
+2025-11-03 22:29:09,810 - api_service - INFO - 🚀 SciPIP API Service started successfully!
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8888 (Press CTRL+C to quit)
+=== check embedding model ===
+=== get embedding model ===
+=== check embedding model ===
+正在从本地路径加载模型: /home/linweiquan/SciPIP/assets/model/jinaai/jina-embeddings-v3
+使用离线模式，不会尝试网络连接...
+==== using device cuda ====
+INFO:     127.0.0.1:51286 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47110 - "GET /health HTTP/1.1" 200 OK
+2025-11-03 22:30:18,396 - api_service - INFO - Processing background: test...
+Batches:   0%|          | 0/1 [00:00<?, ?it/s]XLMRobertaSdpaSelfAttention is used but `torch.nn.functional.scaled_dot_product_attention` does not support non-absolute `position_embedding_type` or `output_attentions=True` or `head_mask`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
+Batches: 100%|██████████| 1/1 [00:00<00:00,  4.71it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.70it/s]
+2025-11-03 22:32:34.298 | DEBUG    | utils.paper_retriever:retrieve_paper:845 - SN retrieve 4 papers
+2025-11-03 22:32:34.640 | DEBUG    | utils.paper_retriever:retrieve_paper:850 - SN entities for retriever: ['linear predictor', 'agnostic pac learning', 'relu activation', 'gradient descent', 'learning single neuron', 'bayesian optimization', 'reinforce method', 'reward function', 'threshold learning', 'driftdiffusion model', 'decision making under uncertainty', 'unsupervised error estimation', 'interim models', 'seed word selection', 'weaklysupervised text classification', 'multimodal datasets', 'modality focusing hypothesis', 'modality venn diagram', 'crossmodal knowledge distillation']
+2025-11-03 22:32:43.921 | DEBUG    | utils.paper_retriever:retrieve_paper:854 - SNKG entities for retriever: ['modality venn diagram', 'unsupervised error estimation', 'reinforce method', 'modality focusing hypothesis', 'threshold learning', 'driftdiffusion model', 'seed word selection', 'interim models', 'decision making under uncertainty', 'learning single neuron', 'linear predictor', 'agnostic pac learning', 'weaklysupervised text classification', 'relu activation', 'crossmodal knowledge distillation', 'multimodal datasets', 'structural causal model']
+2025-11-03 22:32:46.369 | DEBUG    | utils.paper_retriever:retrieve_paper:859 - Entity retrieve 74 papers
+2025-11-03 22:32:46.369 | DEBUG    | utils.paper_retriever:retrieve_paper:860 - SN+entity retrieve 74 papers
+2025-11-03 22:32:48.520 | DEBUG    | utils.paper_retriever:retrieve_paper:868 - Cocite retrieve 19 papers
+2025-11-03 22:32:48.520 | DEBUG    | utils.paper_retriever:retrieve_paper:869 - SN+entity+cocite retrieve 92 papers
+2025-11-03 22:32:48.520 | INFO     | utils.paper_retriever:retrieve:901 - === Begin cal related paper score ===
+2025-11-03 22:32:56.519 | INFO     | utils.paper_retriever:retrieve:906 - === End cal related paper score ===
+2025-11-03 22:32:56.519 | INFO     | utils.paper_retriever:retrieve:921 - === Begin filter related paper score ===
