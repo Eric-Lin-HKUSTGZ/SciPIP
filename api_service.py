@@ -353,6 +353,7 @@ if __name__ == "__main__":
         "api_service:app",
         host=API_HOST,
         port=API_PORT,
+        workers=8,
         reload=False,
         log_level=LOG_LEVEL.lower()
     )

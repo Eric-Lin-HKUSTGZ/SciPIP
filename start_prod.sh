@@ -186,7 +186,8 @@ start_api_daemon() {
     # 后台启动API服务
     print_info "正在启动服务..."
     print_info "使用 Python: $PYTHON_CMD"
-    nohup "$PYTHON_CMD" api_service.py > "$LOG_FILE" 2>&1 &
+    print_info "使用 GPU: 1"
+    CUDA_VISIBLE_DEVICES=1 nohup "$PYTHON_CMD" api_service.py > "$LOG_FILE" 2>&1 &
     
     local pid=$!
     echo $pid > "$PID_FILE"
@@ -220,16 +221,35 @@ stop_service() {
         local pid=$(cat "$PID_FILE")
         if ps -p "$pid" > /dev/null 2>&1; then
             print_info "停止 API 服务 (PID: $pid)..."
+
+            # 先找到所有子进程（worker进程）
+            local child_pids=$(pgrep -P "$pid" 2>/dev/null || true)
+            if [ -n "$child_pids" ]; then
+                print_info "停止所有 worker 进程..."
+                # 先优雅地停止子进程
+                for child_pid in $child_pids; do
+                    kill "$child_pid" 2>/dev/null || true
+                done
+                sleep 2
+                # 强制停止仍在运行的子进程
+                for child_pid in $child_pids; do
+                    if ps -p "$child_pid" > /dev/null 2>&1; then
+                        kill -9 "$child_pid" 2>/dev/null || true
+                    fi
+                done
+            fi
+
+            # 再停止主进程
             kill "$pid" 2>/dev/null || true
             sleep 3
-            
+
             # 强制杀死如果还在运行
             if ps -p "$pid" > /dev/null 2>&1; then
                 print_warning "强制停止 API 服务..."
                 kill -9 "$pid" 2>/dev/null || true
                 sleep 1
             fi
-            
+
             rm -f "$PID_FILE"
             print_success "API服务已停止"
         else
@@ -239,17 +259,21 @@ stop_service() {
     else
         print_warning "API服务未运行（PID文件不存在）"
     fi
-    
+
     # 额外检查：如果端口仍被占用，尝试停止占用端口的进程
     if lsof -Pi :$API_PORT -sTCP:LISTEN -t >/dev/null 2>&1; then
         print_warning "端口 $API_PORT 仍被占用，尝试停止占用该端口的进程..."
-        local port_pid=$(lsof -ti:$API_PORT)
-        if [ -n "$port_pid" ]; then
-            kill "$port_pid" 2>/dev/null || true
+        local port_pids=$(lsof -ti:$API_PORT)
+        if [ -n "$port_pids" ]; then
+            for port_pid in $port_pids; do
+                kill "$port_pid" 2>/dev/null || true
+            done
             sleep 2
-            if ps -p "$port_pid" > /dev/null 2>&1; then
-                kill -9 "$port_pid" 2>/dev/null || true
-            fi
+            for port_pid in $port_pids; do
+                if ps -p "$port_pid" > /dev/null 2>&1; then
+                    kill -9 "$port_pid" 2>/dev/null || true
+                fi
+            done
         fi
     fi
 }

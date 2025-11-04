@@ -1,37 +1,213 @@
-2025-11-03 22:29:02,031 - __main__ - INFO - Starting server on 0.0.0.0:8888
-INFO:     Started server process [3671396]
-INFO:     Waiting for application startup.
-2025-11-03 22:29:02,042 - api_service - INFO - Starting SciPIP API Service...
-2025-11-03 22:29:02.093 | DEBUG    | utils.paper_retriever:__init__:65 - init co-cite map begin...
-2025-11-03 22:29:05.607 | DEBUG    | utils.paper_retriever:__init__:74 - init co-cite map success
-2025-11-03 22:29:05,613 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/linweiquan/SciPIP/assets/model/jinaai/jina-embeddings-v3
-2025-11-03 22:29:05,620 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 根据 architectures 推断 model_type: xlm-roberta
-2025-11-03 22:29:05,621 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - WARNING - 临时移除了 auto_map 以支持离线加载。这会导致参数不匹配警告（LoRA 权重未使用），但不影响模型功能，因为 SentenceTransformer 使用 custom_st.Transformer 类。
-2025-11-03 22:29:05,624 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 已恢复原始 config.json
-The following layers were not sharded: embeddings.LayerNorm.bias, encoder.layer.*.output.dense.weight, encoder.layer.*.output.dense.bias, pooler.dense.weight, embeddings.LayerNorm.weight, embeddings.token_type_embeddings.weight, embeddings.position_embeddings.weight, encoder.layer.*.attention.self.query.weight, encoder.layer.*.attention.self.query.bias, encoder.layer.*.attention.output.LayerNorm.bias, encoder.layer.*.output.LayerNorm.weight, embeddings.word_embeddings.weight, encoder.layer.*.intermediate.dense.bias, encoder.layer.*.attention.output.dense.bias, encoder.layer.*.attention.self.key.weight, encoder.layer.*.intermediate.dense.weight, pooler.dense.bias, encoder.layer.*.output.LayerNorm.bias, encoder.layer.*.attention.self.value.bias, encoder.layer.*.attention.output.dense.weight, encoder.layer.*.attention.self.key.bias, encoder.layer.*.attention.self.value.weight, encoder.layer.*.attention.output.LayerNorm.weight
-2025-11-03 22:29:09,809 - sentence_transformers.SentenceTransformer - INFO - 2 prompts are loaded, with the keys: ['retrieval.query', 'retrieval.passage']
-2025-11-03 22:29:09,810 - api_service - INFO - ✅ Backend initialized successfully
-2025-11-03 22:29:09,810 - api_service - INFO - 🚀 SciPIP API Service started successfully!
-INFO:     Application startup complete.
+2025-11-04 14:41:55,420 - __main__ - INFO - Starting server on 0.0.0.0:8888
 INFO:     Uvicorn running on http://0.0.0.0:8888 (Press CTRL+C to quit)
+INFO:     Started parent process [3846376]
+INFO:     Started server process [3846521]
+INFO:     Waiting for application startup.
+2025-11-04 14:41:59,607 - api_service - INFO - Starting SciPIP API Service...
+INFO:     Started server process [3846525]
+INFO:     Waiting for application startup.
+2025-11-04 14:41:59,612 - api_service - INFO - Starting SciPIP API Service...
+INFO:     Started server process [3846522]
+INFO:     Waiting for application startup.
+2025-11-04 14:41:59,613 - api_service - INFO - Starting SciPIP API Service...
+INFO:     Started server process [3846520]
+INFO:     Waiting for application startup.
+2025-11-04 14:41:59,617 - api_service - INFO - Starting SciPIP API Service...
+INFO:     Started server process [3846523]
+INFO:     Waiting for application startup.
+2025-11-04 14:41:59,658 - api_service - INFO - Starting SciPIP API Service...
+INFO:     Started server process [3846526]
+INFO:     Waiting for application startup.
+2025-11-04 14:41:59,660 - api_service - INFO - Starting SciPIP API Service...
+INFO:     Started server process [3846527]
+INFO:     Waiting for application startup.
+2025-11-04 14:41:59,667 - api_service - INFO - Starting SciPIP API Service...
+INFO:     Started server process [3846524]
+INFO:     Waiting for application startup.
+2025-11-04 14:41:59,715 - api_service - INFO - Starting SciPIP API Service...
+2025-11-04 14:41:59.933 | DEBUG    | utils.paper_retriever:__init__:65 - init co-cite map begin...
+2025-11-04 14:41:59.934 | DEBUG    | utils.paper_retriever:__init__:65 - init co-cite map begin...
+2025-11-04 14:41:59.942 | DEBUG    | utils.paper_retriever:__init__:65 - init co-cite map begin...
+2025-11-04 14:41:59.952 | DEBUG    | utils.paper_retriever:__init__:65 - init co-cite map begin...
+2025-11-04 14:41:59.954 | DEBUG    | utils.paper_retriever:__init__:65 - init co-cite map begin...
+2025-11-04 14:41:59.957 | DEBUG    | utils.paper_retriever:__init__:65 - init co-cite map begin...
+2025-11-04 14:41:59.957 | DEBUG    | utils.paper_retriever:__init__:65 - init co-cite map begin...
+2025-11-04 14:41:59.958 | DEBUG    | utils.paper_retriever:__init__:65 - init co-cite map begin...
+2025-11-04 14:42:03.497 | DEBUG    | utils.paper_retriever:__init__:74 - init co-cite map success
+2025-11-04 14:42:03,502 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/linweiquan/SciPIP/assets/model/jinaai/jina-embeddings-v3
+2025-11-04 14:42:03,508 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 根据 architectures 推断 model_type: xlm-roberta
+2025-11-04 14:42:03,509 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - WARNING - 临时移除了 auto_map 以支持离线加载。这会导致参数不匹配警告（LoRA 权重未使用），但不影响模型功能，因为 SentenceTransformer 使用 custom_st.Transformer 类。
+2025-11-04 14:42:03,512 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 已恢复原始 config.json
+2025-11-04 14:42:03.519 | DEBUG    | utils.paper_retriever:__init__:74 - init co-cite map success
+2025-11-04 14:42:03,524 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/linweiquan/SciPIP/assets/model/jinaai/jina-embeddings-v3
+2025-11-04 14:42:03,531 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 根据 architectures 推断 model_type: xlm-roberta
+2025-11-04 14:42:03,531 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - WARNING - 临时移除了 auto_map 以支持离线加载。这会导致参数不匹配警告（LoRA 权重未使用），但不影响模型功能，因为 SentenceTransformer 使用 custom_st.Transformer 类。
+2025-11-04 14:42:03,534 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 已恢复原始 config.json
+2025-11-04 14:42:03.547 | DEBUG    | utils.paper_retriever:__init__:74 - init co-cite map success
+2025-11-04 14:42:03,551 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/linweiquan/SciPIP/assets/model/jinaai/jina-embeddings-v3
+2025-11-04 14:42:03,558 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 根据 architectures 推断 model_type: xlm-roberta
+2025-11-04 14:42:03,558 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - WARNING - 临时移除了 auto_map 以支持离线加载。这会导致参数不匹配警告（LoRA 权重未使用），但不影响模型功能，因为 SentenceTransformer 使用 custom_st.Transformer 类。
+2025-11-04 14:42:03,561 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 已恢复原始 config.json
+2025-11-04 14:42:03.571 | DEBUG    | utils.paper_retriever:__init__:74 - init co-cite map success
+2025-11-04 14:42:03,581 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/linweiquan/SciPIP/assets/model/jinaai/jina-embeddings-v3
+2025-11-04 14:42:03,589 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 根据 architectures 推断 model_type: xlm-roberta
+2025-11-04 14:42:03,589 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - WARNING - 临时移除了 auto_map 以支持离线加载。这会导致参数不匹配警告（LoRA 权重未使用），但不影响模型功能，因为 SentenceTransformer 使用 custom_st.Transformer 类。
+2025-11-04 14:42:03,593 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 已恢复原始 config.json
+2025-11-04 14:42:03.598 | DEBUG    | utils.paper_retriever:__init__:74 - init co-cite map success
+2025-11-04 14:42:03,602 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/linweiquan/SciPIP/assets/model/jinaai/jina-embeddings-v3
+2025-11-04 14:42:03.607 | DEBUG    | utils.paper_retriever:__init__:74 - init co-cite map success
+2025-11-04 14:42:03,608 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 根据 architectures 推断 model_type: xlm-roberta
+2025-11-04 14:42:03,609 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - WARNING - 临时移除了 auto_map 以支持离线加载。这会导致参数不匹配警告（LoRA 权重未使用），但不影响模型功能，因为 SentenceTransformer 使用 custom_st.Transformer 类。
+2025-11-04 14:42:03,612 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 已恢复原始 config.json
+2025-11-04 14:42:03,612 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/linweiquan/SciPIP/assets/model/jinaai/jina-embeddings-v3
+2025-11-04 14:42:03,618 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 根据 architectures 推断 model_type: xlm-roberta
+2025-11-04 14:42:03,618 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - WARNING - 临时移除了 auto_map 以支持离线加载。这会导致参数不匹配警告（LoRA 权重未使用），但不影响模型功能，因为 SentenceTransformer 使用 custom_st.Transformer 类。
+2025-11-04 14:42:03,621 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 已恢复原始 config.json
+2025-11-04 14:42:03.649 | DEBUG    | utils.paper_retriever:__init__:74 - init co-cite map success
+2025-11-04 14:42:03,657 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/linweiquan/SciPIP/assets/model/jinaai/jina-embeddings-v3
+2025-11-04 14:42:03,665 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 根据 architectures 推断 model_type: xlm-roberta
+2025-11-04 14:42:03,665 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - WARNING - 临时移除了 auto_map 以支持离线加载。这会导致参数不匹配警告（LoRA 权重未使用），但不影响模型功能，因为 SentenceTransformer 使用 custom_st.Transformer 类。
+2025-11-04 14:42:03,668 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 已恢复原始 config.json
+2025-11-04 14:42:03.689 | DEBUG    | utils.paper_retriever:__init__:74 - init co-cite map success
+2025-11-04 14:42:03,697 - sentence_transformers.SentenceTransformer - INFO - Load pretrained SentenceTransformer: /home/linweiquan/SciPIP/assets/model/jinaai/jina-embeddings-v3
+2025-11-04 14:42:03,704 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 根据 architectures 推断 model_type: xlm-roberta
+2025-11-04 14:42:03,704 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - WARNING - 临时移除了 auto_map 以支持离线加载。这会导致参数不匹配警告（LoRA 权重未使用），但不影响模型功能，因为 SentenceTransformer 使用 custom_st.Transformer 类。
+2025-11-04 14:42:03,707 - transformers_modules.jina_hyphen_embeddings_hyphen_v3.custom_st - INFO - 已恢复原始 config.json
+The following layers were not sharded: encoder.layer.*.attention.self.key.bias, encoder.layer.*.attention.self.query.weight, encoder.layer.*.attention.self.value.weight, pooler.dense.weight, encoder.layer.*.output.LayerNorm.weight, encoder.layer.*.attention.output.LayerNorm.weight, encoder.layer.*.intermediate.dense.weight, encoder.layer.*.intermediate.dense.bias, encoder.layer.*.output.dense.bias, pooler.dense.bias, embeddings.token_type_embeddings.weight, encoder.layer.*.attention.output.dense.bias, embeddings.LayerNorm.weight, encoder.layer.*.attention.output.LayerNorm.bias, embeddings.LayerNorm.bias, encoder.layer.*.attention.self.value.bias, encoder.layer.*.attention.self.query.bias, encoder.layer.*.attention.self.key.weight, encoder.layer.*.output.LayerNorm.bias, encoder.layer.*.output.dense.weight, embeddings.position_embeddings.weight, encoder.layer.*.attention.output.dense.weight, embeddings.word_embeddings.weight
+The following layers were not sharded: encoder.layer.*.output.LayerNorm.bias, encoder.layer.*.attention.output.dense.weight, encoder.layer.*.attention.self.value.bias, encoder.layer.*.attention.self.key.bias, encoder.layer.*.attention.self.value.weight, embeddings.LayerNorm.bias, encoder.layer.*.attention.output.LayerNorm.weight, encoder.layer.*.intermediate.dense.bias, encoder.layer.*.attention.self.query.weight, pooler.dense.bias, embeddings.word_embeddings.weight, embeddings.token_type_embeddings.weight, encoder.layer.*.attention.self.query.bias, embeddings.position_embeddings.weight, encoder.layer.*.attention.output.dense.bias, encoder.layer.*.attention.output.LayerNorm.bias, embeddings.LayerNorm.weight, encoder.layer.*.attention.self.key.weight, encoder.layer.*.intermediate.dense.weight, encoder.layer.*.output.dense.weight, encoder.layer.*.output.dense.bias, pooler.dense.weight, encoder.layer.*.output.LayerNorm.weight
+The following layers were not sharded: encoder.layer.*.attention.output.LayerNorm.bias, encoder.layer.*.attention.self.key.bias, encoder.layer.*.output.dense.weight, encoder.layer.*.output.LayerNorm.bias, encoder.layer.*.intermediate.dense.bias, encoder.layer.*.attention.self.key.weight, encoder.layer.*.output.dense.bias, encoder.layer.*.intermediate.dense.weight, pooler.dense.weight, encoder.layer.*.attention.self.value.bias, embeddings.LayerNorm.bias, embeddings.word_embeddings.weight, encoder.layer.*.attention.output.dense.bias, encoder.layer.*.attention.self.query.bias, encoder.layer.*.attention.output.LayerNorm.weight, embeddings.position_embeddings.weight, encoder.layer.*.output.LayerNorm.weight, encoder.layer.*.attention.self.query.weight, embeddings.token_type_embeddings.weight, embeddings.LayerNorm.weight, encoder.layer.*.attention.output.dense.weight, pooler.dense.bias, encoder.layer.*.attention.self.value.weight
+The following layers were not sharded: encoder.layer.*.attention.self.query.bias, embeddings.word_embeddings.weight, pooler.dense.bias, embeddings.LayerNorm.weight, encoder.layer.*.attention.output.dense.bias, encoder.layer.*.output.dense.weight, pooler.dense.weight, encoder.layer.*.attention.self.value.bias, embeddings.token_type_embeddings.weight, encoder.layer.*.attention.self.query.weight, encoder.layer.*.output.LayerNorm.bias, embeddings.LayerNorm.bias, encoder.layer.*.attention.self.key.bias, encoder.layer.*.attention.output.LayerNorm.bias, encoder.layer.*.intermediate.dense.weight, embeddings.position_embeddings.weight, encoder.layer.*.attention.output.dense.weight, encoder.layer.*.output.dense.bias, encoder.layer.*.attention.self.value.weight, encoder.layer.*.attention.output.LayerNorm.weight, encoder.layer.*.intermediate.dense.bias, encoder.layer.*.output.LayerNorm.weight, encoder.layer.*.attention.self.key.weight
+The following layers were not sharded: encoder.layer.*.attention.output.dense.weight, encoder.layer.*.output.dense.bias, encoder.layer.*.output.LayerNorm.weight, encoder.layer.*.intermediate.dense.bias, embeddings.token_type_embeddings.weight, encoder.layer.*.attention.output.dense.bias, embeddings.LayerNorm.weight, encoder.layer.*.attention.self.query.weight, encoder.layer.*.intermediate.dense.weight, encoder.layer.*.attention.self.key.weight, encoder.layer.*.attention.self.key.bias, pooler.dense.weight, encoder.layer.*.output.dense.weight, embeddings.position_embeddings.weight, pooler.dense.bias, encoder.layer.*.attention.self.query.bias, encoder.layer.*.attention.output.LayerNorm.weight, embeddings.word_embeddings.weight, encoder.layer.*.attention.self.value.bias, encoder.layer.*.attention.output.LayerNorm.bias, embeddings.LayerNorm.bias, encoder.layer.*.attention.self.value.weight, encoder.layer.*.output.LayerNorm.bias
+The following layers were not sharded: embeddings.LayerNorm.bias, encoder.layer.*.attention.self.query.weight, pooler.dense.bias, embeddings.token_type_embeddings.weight, encoder.layer.*.intermediate.dense.weight, encoder.layer.*.output.LayerNorm.weight, encoder.layer.*.output.LayerNorm.bias, encoder.layer.*.attention.output.LayerNorm.bias, encoder.layer.*.intermediate.dense.bias, embeddings.LayerNorm.weight, encoder.layer.*.attention.output.LayerNorm.weight, embeddings.word_embeddings.weight, embeddings.position_embeddings.weight, encoder.layer.*.attention.self.value.weight, encoder.layer.*.attention.self.query.bias, encoder.layer.*.output.dense.weight, encoder.layer.*.attention.self.key.weight, pooler.dense.weight, encoder.layer.*.attention.self.key.bias, encoder.layer.*.output.dense.bias, encoder.layer.*.attention.self.value.bias, encoder.layer.*.attention.output.dense.weight, encoder.layer.*.attention.output.dense.bias
+The following layers were not sharded: encoder.layer.*.attention.self.query.bias, encoder.layer.*.attention.self.query.weight, embeddings.LayerNorm.weight, encoder.layer.*.output.dense.bias, encoder.layer.*.attention.output.LayerNorm.weight, encoder.layer.*.attention.output.dense.bias, pooler.dense.bias, encoder.layer.*.attention.self.value.bias, encoder.layer.*.attention.self.key.bias, embeddings.token_type_embeddings.weight, embeddings.position_embeddings.weight, encoder.layer.*.intermediate.dense.weight, encoder.layer.*.attention.self.key.weight, encoder.layer.*.attention.output.dense.weight, encoder.layer.*.output.dense.weight, encoder.layer.*.intermediate.dense.bias, embeddings.word_embeddings.weight, pooler.dense.weight, encoder.layer.*.output.LayerNorm.bias, encoder.layer.*.attention.output.LayerNorm.bias, encoder.layer.*.output.LayerNorm.weight, encoder.layer.*.attention.self.value.weight, embeddings.LayerNorm.bias
+The following layers were not sharded: encoder.layer.*.attention.self.query.bias, encoder.layer.*.attention.self.value.bias, encoder.layer.*.intermediate.dense.bias, encoder.layer.*.attention.self.value.weight, encoder.layer.*.attention.output.LayerNorm.bias, pooler.dense.bias, pooler.dense.weight, embeddings.position_embeddings.weight, encoder.layer.*.intermediate.dense.weight, encoder.layer.*.output.LayerNorm.bias, embeddings.word_embeddings.weight, encoder.layer.*.attention.self.query.weight, encoder.layer.*.output.dense.weight, encoder.layer.*.attention.self.key.bias, encoder.layer.*.output.LayerNorm.weight, encoder.layer.*.output.dense.bias, embeddings.token_type_embeddings.weight, encoder.layer.*.attention.output.dense.bias, embeddings.LayerNorm.bias, encoder.layer.*.attention.output.LayerNorm.weight, encoder.layer.*.attention.self.key.weight, encoder.layer.*.attention.output.dense.weight, embeddings.LayerNorm.weight
+2025-11-04 14:42:08,910 - sentence_transformers.SentenceTransformer - INFO - 2 prompts are loaded, with the keys: ['retrieval.query', 'retrieval.passage']
+2025-11-04 14:42:08,912 - api_service - INFO - ✅ Backend initialized successfully
+2025-11-04 14:42:08,912 - api_service - INFO - 🚀 SciPIP API Service started successfully!
+INFO:     Application startup complete.
+2025-11-04 14:42:08,964 - sentence_transformers.SentenceTransformer - INFO - 2 prompts are loaded, with the keys: ['retrieval.query', 'retrieval.passage']
+2025-11-04 14:42:08,965 - api_service - INFO - ✅ Backend initialized successfully
+2025-11-04 14:42:08,965 - api_service - INFO - 🚀 SciPIP API Service started successfully!
+INFO:     Application startup complete.
+2025-11-04 14:42:09,710 - sentence_transformers.SentenceTransformer - INFO - 2 prompts are loaded, with the keys: ['retrieval.query', 'retrieval.passage']
+2025-11-04 14:42:09,711 - api_service - INFO - ✅ Backend initialized successfully
+2025-11-04 14:42:09,711 - api_service - INFO - 🚀 SciPIP API Service started successfully!
+INFO:     Application startup complete.
+2025-11-04 14:42:09,917 - sentence_transformers.SentenceTransformer - INFO - 2 prompts are loaded, with the keys: ['retrieval.query', 'retrieval.passage']
+2025-11-04 14:42:09,918 - api_service - INFO - ✅ Backend initialized successfully
+2025-11-04 14:42:09,918 - api_service - INFO - 🚀 SciPIP API Service started successfully!
+INFO:     Application startup complete.
+2025-11-04 14:42:10,052 - sentence_transformers.SentenceTransformer - INFO - 2 prompts are loaded, with the keys: ['retrieval.query', 'retrieval.passage']
+2025-11-04 14:42:10,054 - api_service - INFO - ✅ Backend initialized successfully
+2025-11-04 14:42:10,054 - api_service - INFO - 🚀 SciPIP API Service started successfully!
+INFO:     Application startup complete.
+2025-11-04 14:42:10,076 - sentence_transformers.SentenceTransformer - INFO - 2 prompts are loaded, with the keys: ['retrieval.query', 'retrieval.passage']
+2025-11-04 14:42:10,078 - api_service - INFO - ✅ Backend initialized successfully
+2025-11-04 14:42:10,078 - api_service - INFO - 🚀 SciPIP API Service started successfully!
+INFO:     Application startup complete.
+2025-11-04 14:42:10,089 - sentence_transformers.SentenceTransformer - INFO - 2 prompts are loaded, with the keys: ['retrieval.query', 'retrieval.passage']
+2025-11-04 14:42:10,091 - api_service - INFO - ✅ Backend initialized successfully
+2025-11-04 14:42:10,091 - api_service - INFO - 🚀 SciPIP API Service started successfully!
+INFO:     Application startup complete.
+2025-11-04 14:42:10,116 - sentence_transformers.SentenceTransformer - INFO - 2 prompts are loaded, with the keys: ['retrieval.query', 'retrieval.passage']
+2025-11-04 14:42:10,118 - api_service - INFO - ✅ Backend initialized successfully
+2025-11-04 14:42:10,118 - api_service - INFO - 🚀 SciPIP API Service started successfully!
+INFO:     Application startup complete.
 === check embedding model ===
 === get embedding model ===
 === check embedding model ===
 正在从本地路径加载模型: /home/linweiquan/SciPIP/assets/model/jinaai/jina-embeddings-v3
 使用离线模式，不会尝试网络连接...
 ==== using device cuda ====
-INFO:     127.0.0.1:51286 - "GET /health HTTP/1.1" 200 OK
-INFO:     127.0.0.1:47110 - "GET /health HTTP/1.1" 200 OK
-2025-11-03 22:30:18,396 - api_service - INFO - Processing background: test...
+INFO:     127.0.0.1:57496 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55312 - "GET /health HTTP/1.1" 200 OK
+=== check embedding model ===
+=== get embedding model ===
+=== check embedding model ===
+正在从本地路径加载模型: /home/linweiquan/SciPIP/assets/model/jinaai/jina-embeddings-v3
+使用离线模式，不会尝试网络连接...
+==== using device cuda ====
+INFO:     127.0.0.1:48404 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58200 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42604 - "GET /health HTTP/1.1" 200 OK
+=== check embedding model ===
+=== get embedding model ===
+=== check embedding model ===
+正在从本地路径加载模型: /home/linweiquan/SciPIP/assets/model/jinaai/jina-embeddings-v3
+使用离线模式，不会尝试网络连接...
+==== using device cuda ====
+INFO:     127.0.0.1:48024 - "POST /generate HTTP/1.1" 200 OK
+2025-11-04 14:44:55,732 - api_service - INFO - Processing background: Generate innovative ideas for sustainable urban farming systems that can be implemented in high-dens...
+INFO:     127.0.0.1:35760 - "GET /health HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+=== check embedding model ===
+=== get embedding model ===
+=== check embedding model ===
+正在从本地路径加载模型: /home/linweiquan/SciPIP/assets/model/jinaai/jina-embeddings-v3
+使用离线模式，不会尝试网络连接...
+==== using device cuda ====
+INFO:     127.0.0.1:57110 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:48918 - "GET / HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48928 - "PRI %2A HTTP/2.0" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:48930 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:48936 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33164 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:55702 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:47060 - "GET /health HTTP/1.1" 200 OK
 Batches:   0%|          | 0/1 [00:00<?, ?it/s]XLMRobertaSdpaSelfAttention is used but `torch.nn.functional.scaled_dot_product_attention` does not support non-absolute `position_embedding_type` or `output_attentions=True` or `head_mask`. Falling back to the manual attention implementation, but specifying the manual implementation will be required from Transformers version v5.0.0 onwards. This warning can be removed using the argument `attn_implementation="eager"` when loading the model.
-Batches: 100%|██████████| 1/1 [00:00<00:00,  4.71it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  4.70it/s]
-2025-11-03 22:32:34.298 | DEBUG    | utils.paper_retriever:retrieve_paper:845 - SN retrieve 4 papers
-2025-11-03 22:32:34.640 | DEBUG    | utils.paper_retriever:retrieve_paper:850 - SN entities for retriever: ['linear predictor', 'agnostic pac learning', 'relu activation', 'gradient descent', 'learning single neuron', 'bayesian optimization', 'reinforce method', 'reward function', 'threshold learning', 'driftdiffusion model', 'decision making under uncertainty', 'unsupervised error estimation', 'interim models', 'seed word selection', 'weaklysupervised text classification', 'multimodal datasets', 'modality focusing hypothesis', 'modality venn diagram', 'crossmodal knowledge distillation']
-2025-11-03 22:32:43.921 | DEBUG    | utils.paper_retriever:retrieve_paper:854 - SNKG entities for retriever: ['modality venn diagram', 'unsupervised error estimation', 'reinforce method', 'modality focusing hypothesis', 'threshold learning', 'driftdiffusion model', 'seed word selection', 'interim models', 'decision making under uncertainty', 'learning single neuron', 'linear predictor', 'agnostic pac learning', 'weaklysupervised text classification', 'relu activation', 'crossmodal knowledge distillation', 'multimodal datasets', 'structural causal model']
-2025-11-03 22:32:46.369 | DEBUG    | utils.paper_retriever:retrieve_paper:859 - Entity retrieve 74 papers
-2025-11-03 22:32:46.369 | DEBUG    | utils.paper_retriever:retrieve_paper:860 - SN+entity retrieve 74 papers
-2025-11-03 22:32:48.520 | DEBUG    | utils.paper_retriever:retrieve_paper:868 - Cocite retrieve 19 papers
-2025-11-03 22:32:48.520 | DEBUG    | utils.paper_retriever:retrieve_paper:869 - SN+entity+cocite retrieve 92 papers
-2025-11-03 22:32:48.520 | INFO     | utils.paper_retriever:retrieve:901 - === Begin cal related paper score ===
-2025-11-03 22:32:56.519 | INFO     | utils.paper_retriever:retrieve:906 - === End cal related paper score ===
-2025-11-03 22:32:56.519 | INFO     | utils.paper_retriever:retrieve:921 - === Begin filter related paper score ===
+Batches: 100%|██████████| 1/1 [00:00<00:00,  1.22it/s]Batches: 100%|██████████| 1/1 [00:00<00:00,  1.21it/s]
+2025-11-04 14:48:04.789 | DEBUG    | utils.paper_retriever:retrieve_paper:845 - SN retrieve 4 papers
+2025-11-04 14:48:05.131 | DEBUG    | utils.paper_retriever:retrieve_paper:850 - SN entities for retriever: ['empathy stages', 'empsoa', 'selfother awareness', 'empathetic response generation', 'im sorry', 'collaborative clustering', 'noise resistible mutualtraining', 'pseudolabel selftraining', 'person reidentification', 'person reidentification', 'unsupervised domain adaptation', 'unsupervised domain adaptation', 'pseudo labels', 'pseudo labels', 'graph convolutional network', 'graph convolutional network', 'convolutional neural network', 'convolutional neural network', 'meta pairwise relationship distillation', 'unsupervised person reidentification']
+2025-11-04 14:48:14.521 | DEBUG    | utils.paper_retriever:retrieve_paper:854 - SNKG entities for retriever: ['meta pairwise relationship distillation', 'pseudolabel selftraining', 'selfother awareness', 'empathy stages', 'noise resistible mutualtraining', 'empsoa', 'collaborative clustering', 'multiobjective bayesian optimization', 'empathetic response generation', 'unsupervised person reidentification', 'pseudo labels']
+2025-11-04 14:48:16.105 | DEBUG    | utils.paper_retriever:retrieve_paper:859 - Entity retrieve 78 papers
+2025-11-04 14:48:16.105 | DEBUG    | utils.paper_retriever:retrieve_paper:860 - SN+entity retrieve 79 papers
+2025-11-04 14:48:17.180 | DEBUG    | utils.paper_retriever:retrieve_paper:868 - Cocite retrieve 10 papers
+2025-11-04 14:48:17.180 | DEBUG    | utils.paper_retriever:retrieve_paper:869 - SN+entity+cocite retrieve 89 papers
+2025-11-04 14:48:17.181 | INFO     | utils.paper_retriever:retrieve:901 - === Begin cal related paper score ===
+INFO:     127.0.0.1:57006 - "GET /health HTTP/1.1" 200 OK
+2025-11-04 14:48:25.134 | INFO     | utils.paper_retriever:retrieve:906 - === End cal related paper score ===
+2025-11-04 14:48:25.135 | INFO     | utils.paper_retriever:retrieve:921 - === Begin filter related paper score ===
+2025-11-04 14:48:54.278 | INFO     | utils.paper_retriever:retrieve:923 - === End filter related paper score ===
+=== check embedding model ===
+=== get embedding model ===
+=== check embedding model ===
+正在从本地路径加载模型: /home/linweiquan/SciPIP/assets/model/jinaai/jina-embeddings-v3
+使用离线模式，不会尝试网络连接...
+==== using device cuda ====
+INFO:     127.0.0.1:44604 - "GET /health HTTP/1.1" 200 OK
+2025-11-04 14:50:24.054 | INFO     | generator:generate_inspiration:138 - Generate inspiration for related paper 1 succeed
+INFO:     127.0.0.1:38764 - "GET /health HTTP/1.1" 200 OK
+2025-11-04 14:50:32.128 | INFO     | generator:generate_inspiration:138 - Generate inspiration for related paper 3 succeed
+2025-11-04 14:50:35.975 | INFO     | generator:generate_inspiration:138 - Generate inspiration for related paper 2 succeed
+2025-11-04 14:50:37.418 | INFO     | generator:generate_inspiration:138 - Generate inspiration for related paper 6 succeed
+2025-11-04 14:50:45.255 | INFO     | generator:generate_inspiration:138 - Generate inspiration for related paper 9 succeed
+2025-11-04 14:50:52.179 | INFO     | generator:generate_inspiration:138 - Generate inspiration for related paper 7 succeed
+2025-11-04 14:50:54.145 | INFO     | generator:generate_inspiration:138 - Generate inspiration for related paper 4 succeed
+2025-11-04 14:50:55.764 | INFO     | generator:generate_inspiration:138 - Generate inspiration for related paper 5 succeed
+2025-11-04 14:51:07.083 | INFO     | generator:generate_inspiration:138 - Generate inspiration for related paper 8 succeed
+2025-11-04 14:51:07.083 | INFO     | generator:generate_ins_bs:150 - Generate inspirations for all related papers succeed. Total inspirations: 9
+INFO:     127.0.0.1:37926 - "GET /health HTTP/1.1" 200 OK
+2025-11-04 14:51:31.783 | INFO     | generator:generate_inspiration:138 - Generate inspiration for related paper 0 succeed
+INFO:     127.0.0.1:38958 - "GET /health HTTP/1.1" 200 OK
+2025-11-04 14:52:31.336 | INFO     | generator:generate_ins_bs:169 - Generate ideas from inspirations succeed. Extracted 1 initial ideas
+INFO:     127.0.0.1:45122 - "GET /health HTTP/1.1" 200 OK
+2025-11-04 14:53:31.459 | INFO     | generator:generate_ins_bs:178 - Idea integration succeed
+2025-11-04 14:53:31.459 | INFO     | generator:generate_ins_bs:182 - Extracted 1 ideas after filtering
+=== check embedding model ===
+=== get embedding model ===
+=== check embedding model ===
+正在从本地路径加载模型: /home/linweiquan/SciPIP/assets/model/jinaai/jina-embeddings-v3
+使用离线模式，不会尝试网络连接...
+==== using device cuda ====
+INFO:     127.0.0.1:55148 - "GET /health HTTP/1.1" 200 OK
+2025-11-04 14:55:28.141 | INFO     | generator:expand_idea:202 - Expand the 0th idea succeed
+2025-11-04 14:55:28,141 - api_service - INFO - Idea generation completed: 1 initial ideas, 1 final ideas
+INFO:     127.0.0.1:59750 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48640 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51688 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34482 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45342 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52062 - "GET /health HTTP/1.1" 200 OK

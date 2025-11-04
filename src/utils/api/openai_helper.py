@@ -38,8 +38,8 @@ class OpenAIHelper(BaseHelper):
 
     def __init__(self, api_key, model, base_url=None, timeout=None):
         super().__init__(api_key, model, base_url)
-        # 增加默认超时时间到 120 秒，因为 LLM API 调用可能需要更长时间
-        self.timeout = timeout if timeout is not None else 120
+        # 增加默认超时时间到 600 秒（10分钟），因为 LLM API 调用可能需要更长时间
+        self.timeout = timeout if timeout is not None else 600
 
     def _build_endpoint(self) -> str:
         base = (self.base_url or "").rstrip('/')
